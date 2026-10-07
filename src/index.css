@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-paper: #F8F5EF;
+    --surface-card: #FFFFFF;
+    --surface-soft: #F2EFE8;
+    --ink-black: #141414;
+    --ink-muted: #5E5D57;
+    --ink-faint: #8E8D86;
+    --border-subtle: #E2DDD3;
+    --border-strong: #B8B2A5;
+    --navy-slate: #1D3557;
+    --navy-soft: #E6EDF5;
+    --brand-yellow: #FFD60A;
+    --amber-kaizen: #C26F1E;
+    --amber-soft: #FDF4E7;
+    --emerald-green: #2E7D32;
+    --emerald-soft: #E8F5E9;
+    --ruby-red: #C62828;
+    --ruby-soft: #FFEBEE;
+  }
+
+  body {
+    background-color: var(--bg-paper);
+    color: var(--ink-black);
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.012em;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Grille pointillée d'ingénieur / architecte (signature EasyObeya) */
+.canvas-grid {
+  background-color: #F8F5EF;
+  background-image: radial-gradient(circle, #DDD8CD 0.85px, transparent 0.85px);
+  background-size: 15px 15px;
+}
+
+/* Grille fine secondaire pour les panneaux intérieurs */
+.canvas-grid-subtle {
+  background-image: radial-gradient(circle, #E5E0D6 0.75px, transparent 0.75px);
+  background-size: 12px 12px;
+}
+
+/* Carte style EasyObeya (micro-bordure franche, fond blanc, ombre fine d'outil pro) */
+.obeya-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DDD8CD;
+  box-shadow: 0 1px 3px 0 rgba(20, 20, 20, 0.04), 0 1px 2px -1px rgba(20, 20, 20, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.obeya-card:hover {
+  border-color: #B8B2A5;
+  box-shadow: 0 4px 12px -2px rgba(20, 20, 20, 0.06);
+}
+
+.obeya-card-active {
+  background-color: #FFFFFF;
+  border: 1px solid #1D3557;
+  box-shadow: 0 0 0 1px #1D3557, 0 4px 12px -2px rgba(29, 53, 87, 0.12);
+}
+
+/* Badges / Chips techniques */
+.obeya-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border: 1px solid #DDD8CD;
+  background-color: #F8F5EF;
+  color: #141414;
+}
+
+.font-serif-editorial {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.font-mono-tech {
+  font-family: "JetBrains Mono", monospace;
+}
